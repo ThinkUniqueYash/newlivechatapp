@@ -40,7 +40,8 @@ io.on("connection", (socket) => {
 app.get("/", (req, res) => {
   res.send("Server running ✅");
 });
+const PORT=process.env.PORT || 3001;
 
-server.listen(3001, () => {
+server.listen(PORT, () => {
   console.log("🚀 Server started on http://localhost:3001");
 });
